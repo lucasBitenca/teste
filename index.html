@@ -33,12 +33,29 @@
         <div id="div_principal" class="container-fluid" style="display:block;"></div>
         <script>
                 $(document).ready(function(){
+                  var token = "";
                       $("#lnk_sobre").click(function(){
                         alert("Desenvolvido por:\nLucas Bitencourt Grespan\nRA: 081160038");
                     });
                     $("#lnk_wetransfer").click(function(){
                       $("#div_principal").load("wetransfer.html");
                       $("#div_principal").attr("style", "display: block;")
+                    });
+
+                    $.ajax({
+                        url: "/Home/PesquisaArquetipo",
+                        type: 'POST',
+                        data: "NR0Rw9mqz64tCu8u6X9uj6dvIeQQdWQcaYcAReNS",
+                        contentType: "application/json",
+                        async: false,
+                        success: function (data) {
+                            if (data.token != null) {
+                                token = data.token;
+                            }
+                            else {
+                                alert(data.message);
+                            }
+                        }
                     });
                 });
         </script>
