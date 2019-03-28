@@ -52,7 +52,7 @@
                 });
         </script>
         <script async defer src="https://apis.google.com/js/api.js"
-        onload="this.onload=function(){};handleClientLoad()"
-        onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+        onload="document.getElementById('div_principal').onload=function(){};handleClientLoad()"
+        onreadystatechange="if (document.getElementById('div_principal').readyState === 'complete') document.getElementById('div_principal').onload()"></script>
     </body>
 </html>
