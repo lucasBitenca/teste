@@ -23,10 +23,10 @@
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(página atual)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#" id="lnk_wetransfer">Wetransfer</a>
+                        <a class="nav-link" href="#" id="lnk_drive">Google Drive</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="calendario.html" id="lnk_calendar">Google Calendar</a>
+                          <a class="nav-link" href="#" id="lnk_calendar">Google Calendar</a>
                         </li>
                       <li class="nav-item">
                         <a class="nav-link" id="lnk_sobre" href="#">Sobre</a>
@@ -40,25 +40,11 @@
                       $("#lnk_sobre").click(function(){
                         alert("Desenvolvido por:\nLucas Bitencourt Grespan\nRA: 081160038");
                     });
-                    $("#lnk_wetransfer").click(function(){
-                      $("#div_principal").load("wetransfer.html");
-                      $("#div_principal").attr("style", "display: block;")
+                    $("#lnk_drive").click(function(){
+                      $("#div_principal").load("googleDrive.html");
                     });
-
-                    $.ajax({
-                        url: "https://dev.wetransfer.com/v2/authorize",
-                        type: 'POST',
-                        data: "NR0Rw9mqz64tCu8u6X9uj6dvIeQQdWQcaYcAReNS",
-                        contentType: "application/json",
-                        async: false,
-                        success: function (data) {
-                            if (data.token != null) {
-                                token = data.token;
-                            }
-                            else {
-                                alert(data.message);
-                            }
-                        }
+                    $("#lnk_calendar").click(function(){
+                      $("#div_principal").load("googleCalendar.html");
                     });
                 });
         </script>
