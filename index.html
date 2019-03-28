@@ -45,6 +45,7 @@
                     });
                     $("#lnk_calendar").click(function(){
                       $("#div_principal").load("googleCalendar.html");
+                      document.getElementsByTagName("head").appendChild("googleCalendar.js");
                     });
                 });
         </script>
