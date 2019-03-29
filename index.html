@@ -46,7 +46,9 @@
                       $("#div_principal").load("googleDrive.html");
                     });
                     $("#lnk_calendar").click(function(){
-                      $("#div_principal").load("googleCalendar.html");
+                      $("#div_principal").load("googleCalendar.html").then(function(){
+                        alert('');
+                      });
                       handleClientLoad();
                     });
                 });
