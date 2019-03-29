@@ -34,6 +34,7 @@
                         <a class="nav-link" id="lnk_sobre" href="#">Sobre</a>
                       </li>
                     </ul>
+                    <button id="authorize_button" style="display: none;">Authorize</button>
         </nav>
         <div id="div_principal" class="container-fluid" style="display:block;"></div>
         <script>
@@ -46,9 +47,7 @@
                       $("#div_principal").load("googleDrive.html");
                     });
                     $("#lnk_calendar").click(function(){
-                      $("#div_principal").load("googleCalendar.html").then(function(){
-                        alert('');
-                      });
+                      $("#div_principal").load("googleCalendar.html");
                       handleClientLoad();
                     });
                 });
