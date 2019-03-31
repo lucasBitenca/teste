@@ -45,15 +45,17 @@
                     });
                     $("#lnk_drive").click(function(){
                       $("#div_principal").load("googleDrive.html");
+                      DefineAPI(document.getElementById("lnk_drive").href);
+                      handleClientLoad();
                     });
                     $("#lnk_calendar").click(function(){
                       $("#div_principal").load("googleCalendar.html");
+                      DefineAPI(document.getElementById("lnk_calendar").href);
                       handleClientLoad();
                     });
                 });
         </script>
-        <script src="googleCalendar.js"></script>
-        <script src="googleDrive.js"></script>
+        <script src="googleAPI.js"></script>
         <script  src="https://apis.google.com/js/api.js"
         onload="document.getElementById('div_principal').onload=function(){};handleClientLoad()"
         onreadystatechange="if (document.getElementById('div_principal').readyState === 'complete') document.getElementById('div_principal').onload()"></script>
