@@ -118,8 +118,15 @@
               if (!when) {
                 when = event.start.date;
               }
-              appendPre(event.summary + ' (' + when + ')')
+              document.getElementById("table_eventos").innerHTML += "<tbody><tr>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + (i+1) + "</td>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + event.organizer.displayName + "</td>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + event.summary + "</td>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + event.start.dateTime + "</td>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + event.updated + "</td>";
+              document.getElementById("table_eventos").innerHTML += "</tr>";
             }
+            document.getElementById("table_eventos").innerHTML += "</tbody>";
           } else {
             appendPre('No upcoming events found.');
           }

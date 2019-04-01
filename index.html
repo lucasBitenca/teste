@@ -24,11 +24,8 @@
                         <a class="nav-link" href="index.html">Home <span class="sr-only">(página atual)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#drive" id="lnk_drive">Google Drive</a>
+                        <a class="nav-link" href="#calendar" id="lnk_calendar">Google Calendar</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="#calendar" id="lnk_calendar">Google Calendar</a>
-                        </li>
                       <li class="nav-item">
                         <a class="nav-link" id="lnk_sobre" href="#">Sobre</a>
                       </li>
@@ -42,11 +39,6 @@
                   var token = "";
                       $("#lnk_sobre").click(function(){
                         alert("Desenvolvido por:\nLucas Bitencourt Grespan\nRA: 081160038");
-                    });
-                    $("#lnk_drive").click(function(){
-                      $("#div_principal").load("googleDrive.html");
-                      DefineAPI(document.getElementById("lnk_drive").href);
-                      handleClientLoad();
                     });
                     $("#lnk_calendar").click(function(){
                       $("#div_principal").load("googleCalendar.html");
