@@ -7,7 +7,7 @@
           DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
           SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
         }
-        else if (google.substr(google.indexof("#"), google.length) == "#drive")
+        else if (google.substr(google.indexOf("#"), google.length) == "#drive")
         {
           DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
           SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
