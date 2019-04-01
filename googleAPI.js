@@ -3,11 +3,11 @@
       var API_KEY = 'AIzaSyD4pQXd7l7Sp5bk2Dcr-jN8S1L71TP8SDE';
       var DISCOVERY_DOCS = "", SCOPES = "";
       function DefineAPI(google){
-        if (google == "#calendar"){
+        if (google.substr(google.indexof("#"), google.length) == "calendar"){
           DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
           SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
         }
-        else if (google == "#drive")
+        else if (google.substr(google.indexof("#"), google.length) == "#drive")
         {
           DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
           SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
