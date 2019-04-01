@@ -112,22 +112,18 @@
           
 
           if (events.length > 0) {
-            document.getElementById("table_eventos").innerHTML += "<tbody>";
             for (i = 0; i < events.length; i++) {
               var event = events[i];
               var when = event.start.dateTime;
               if (!when) {
                 when = event.start.date;
               }
-              document.getElementById("table_eventos").innerHTML += "<tr>";
-              document.getElementById("table_eventos").innerHTML += "<td>" + (i+1) + "</td>";
-              document.getElementById("table_eventos").innerHTML += "<td>" + event.organizer.displayName + "</td>";
-              document.getElementById("table_eventos").innerHTML += "<td>" + event.summary + "</td>";
-              document.getElementById("table_eventos").innerHTML += "<td>" + event.start.dateTime + "</td>";
-              document.getElementById("table_eventos").innerHTML += "<td>" + event.updated + "</td>";
-              document.getElementById("table_eventos").innerHTML += "</tr>";
+              document.getElementById("table_eventos").innerHTML += "<td>" + (i+1) + "</td>" +
+              "<td>" + event.organizer.displayName + "</td>" +
+              "<td>" + event.summary + "</td>" +
+              "<td>" + event.start.dateTime + "</td>" +
+              "<td>" + event.updated + "</td>"
             }
-            document.getElementById("table_eventos").innerHTML += "</tbody>";
           } else {
             appendPre('No upcoming events found.');
           }
