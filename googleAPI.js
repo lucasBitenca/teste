@@ -112,13 +112,14 @@
           
 
           if (events.length > 0) {
+            document.getElementById("table_eventos").innerHTML += "<tbody>";
             for (i = 0; i < events.length; i++) {
               var event = events[i];
               var when = event.start.dateTime;
               if (!when) {
                 when = event.start.date;
               }
-              document.getElementById("table_eventos").innerHTML += "<tbody><tr>";
+              document.getElementById("table_eventos").innerHTML += "<tr>";
               document.getElementById("table_eventos").innerHTML += "<td>" + (i+1) + "</td>";
               document.getElementById("table_eventos").innerHTML += "<td>" + event.organizer.displayName + "</td>";
               document.getElementById("table_eventos").innerHTML += "<td>" + event.summary + "</td>";
